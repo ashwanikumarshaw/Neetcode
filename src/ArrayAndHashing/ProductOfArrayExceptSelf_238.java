@@ -24,7 +24,6 @@ public class ProductOfArrayExceptSelf_238 {
 		
 		int[] num=new int[nums.length];
 		for(int i=0;i<nums.length;i++){
-			//System.out.println(pre[i]+"++"+post[i]);
 			num[i]=pre[i]*post[i];
 		}
 		return num;
