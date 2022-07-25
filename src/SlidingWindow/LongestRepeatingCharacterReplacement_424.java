@@ -28,6 +28,7 @@ public class LongestRepeatingCharacterReplacement_424 {
 			repeat = Math.max(repeat, map.get(ch));
 			if (right - left + 1 - repeat > k) {
 				char delete = s.charAt(left);
+				
 				map.put(delete, map.get(delete) - 1);
 				left++;
 
