@@ -21,6 +21,10 @@ public class LongestRepeatingCharacterReplacement_424 {
 				map.put(ch, 0);
 			}
 			map.put(ch, map.get(ch) + 1);
+			// IMPORTANT: repeat is not the accurate number of dominant character, It is the
+			// historical maximum count
+			// We do not care about it because unless it gets greater, it won't affect our
+			// final max window size.
 			repeat = Math.max(repeat, map.get(ch));
 			if (right - left + 1 - repeat > k) {
 				char delete = s.charAt(left);
